@@ -7,12 +7,14 @@ function checkWin(x,y)
         {
             if ( board[(i+3)] ==  'X' && board[(i+6)] ==  'X' && board[i] ==  'X')
                 {
+                    document.getElementById("winner").style.display="flex";
                     document.getElementById("winner").innerHTML = `${x} Wins`;
                     setTimeout(() => {location.reload();},1500);
                     return true;
                 }
             else  if ( board[(i+3)] ==  'O' && board[(i+6)] ==  'O' && board[i] ==  'O')
                 {
+                         document.getElementById("winner").style.display="flex";
                         document.getElementById("winner").innerHTML =`${y} Wins`;
                         setTimeout(() => {location.reload();},1500);
                         return true;
@@ -21,13 +23,14 @@ function checkWin(x,y)
         if (i == 0|| i == 3 || i == 6 )
             {
                 if ( board[(i+1)] ==  'X' && board[(i+2)] ==  'X' && board[i] ==  'X')
-                    {
+                    {     document.getElementById("winner").style.display="flex";
                         document.getElementById("winner").innerHTML = `${x} Wins`;
                         setTimeout(() => {location.reload();},1500);
                         return true;
                     }
                     else  if ( board[(i+1)] ==  'O' && board[(i+2)] ==  'O' && board[i] ==  'O')
                     {
+                        document.getElementById("winner").style.display="flex";
                         document.getElementById("winner").innerHTML =`${y} Wins`;
                         setTimeout(() => {location.reload();},1500);
                         return true;
@@ -38,12 +41,14 @@ function checkWin(x,y)
             {
                 if (board[i + 4] == 'X' && board[i + 8] == 'X' && board[i] =='X')
                     {
+                        document.getElementById("winner").style.display="flex";
                         document.getElementById("winner").innerHTML = `${x} Wins`;
                         setTimeout(() => {location.reload();},1500);
                         return true;
                     }
                     else if (board[i + 4] == 'O' && board[i + 8] == 'O' && board[i] == 'O')
                         {
+                            document.getElementById("winner").style.display="flex";
                             document.getElementById("winner").innerHTML = `${y} Wins`;
                             setTimeout(() => {location.reload();},1500);
                             return true;
@@ -53,19 +58,21 @@ function checkWin(x,y)
                 {
                     if (board [i + 2] == 'X' && board[i + 4] == 'X' && board[i] == 'X' )
                         {
+                            document.getElementById("winner").style.display="flex";
                             document.getElementById("winner").innerHTML = `${x} Wins`;
                             setTimeout(() => {location.reload();},1500);
                             return true;
                         }
                         else if (board [i + 2] == 'O' && board[i + 4] == 'O' && board[i] == 'O')
                             {
+                                document.getElementById("winner").style.display="flex";
                                 document.getElementById("winner").innerHTML = `${y} Wins`;
                                 setTimeout(() => {location.reload();},1500);
                                 return true;
                             }
                 }
         if (turn == 9)
-            {
+            {     document.getElementById("winner").style.display="flex";
                 document.getElementById("winner").innerHTML = `Draw`;
                                 setTimeout(() => {location.reload();},1500);
                                 return true;
